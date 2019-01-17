@@ -5,18 +5,10 @@ import java.util.List;
 
 public class Person {
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    private String surname;
-    private String firstName;
     String project;
     List<Integer> previousTables;
+    private String surname;
+    private String firstName;
 
     Person(String surname, String firstName, String project) {
         this.surname = surname;
@@ -25,15 +17,23 @@ public class Person {
         previousTables = new ArrayList<>();
     }
 
-    @Override
-    public String toString() {
-        return "{"+ surname + ' ' + firstName +
-            ", project='" + project + '\'' +
-            ", previousTables=" + previousTables +
-            '}';
+    public String getSurname() {
+        return surname;
     }
 
-    public String getProject() {
+    public String getFirstName() {
+        return firstName;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + surname + ' ' + firstName +
+                ", project='" + project + '\'' +
+                ", previousTables=" + previousTables +
+                '}';
+    }
+
+    String getProject() {
         return project;
     }
 }

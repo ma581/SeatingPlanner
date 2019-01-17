@@ -14,21 +14,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class AllocatorTest {
 
     @Test
-    void shouldHaveOneSession(){
+    void shouldHaveOneSession() {
         Allocator allocator = new Allocator(1, 0, 0);
         List allocations = allocator.allocate(new HashSet<>());
         assertEquals(1, allocations.size());
     }
 
     @Test
-    void shouldHaveZeroSessions(){
+    void shouldHaveZeroSessions() {
         Allocator allocator = new Allocator(2, 0, 0);
         List allocations = allocator.allocate(new HashSet<>());
         assertEquals(2, allocations.size());
     }
 
     @Test
-    void shouldHaveOneSessionOneTable(){
+    void shouldHaveOneSessionOneTable() {
         Allocator allocator = new Allocator(1, 1, 0);
         List<List<List<Person>>> allocations = allocator.allocate(new HashSet<>());
         assertEquals(1, allocations.get(0).size());

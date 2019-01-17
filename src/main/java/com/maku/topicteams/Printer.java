@@ -1,18 +1,21 @@
 package com.maku.topicteams;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 class Printer {
 
     private final int numberOfSessions;
     private final int numberOfTables;
-    private ArrayList<ArrayList<ArrayList<Person>>> tableRotation;
+    private List<List<List<Person>>> tableRotation;
 
     Printer(int numberOfTables, int numberOfSessions, List tableRotation) {
         this.numberOfTables = numberOfTables;
         this.numberOfSessions = numberOfSessions;
-        this.tableRotation = (ArrayList<ArrayList<ArrayList<Person>>>) tableRotation;
+        this.tableRotation = (List<List<List<Person>>>) tableRotation;
     }
 
     void printTableRotation() {
@@ -38,7 +41,7 @@ class Printer {
                 .collect(Collectors.toList());
     }
 
-    private ArrayList<Person> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
+    private List<Person> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
         return tableRotation.get(sessionNumber).get(tableNumber);
     }
 
@@ -46,7 +49,7 @@ class Printer {
         printTitle("ALLOCATED PEOPLE PROJECT COUNT");
         for (int i = 0; i < numberOfSessions; i++) {
             for (int j = 0; j < numberOfTables; j++) {
-                final ArrayList<Person> peopleAtTableForSession = getPeopleAtTableForSession(j, i);
+                final List<Person> peopleAtTableForSession = getPeopleAtTableForSession(j, i);
                 Map<String, Integer> numberOfPeopleOfProject = new HashMap<>();
 
                 for (Person person : peopleAtTableForSession) {
@@ -58,7 +61,7 @@ class Printer {
         System.out.println();
     }
 
-    public void printRecords(Collection names) {
+    void printRecords(Collection names) {
         printTitle("ALLOCATED TABLES FOR EACH PERSON");
         names.forEach(System.out::println);
     }
