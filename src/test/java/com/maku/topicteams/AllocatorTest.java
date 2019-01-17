@@ -15,28 +15,28 @@ class AllocatorTest {
 
     @Test
     void shouldHaveOneSession() {
-        Allocator allocator = new Allocator(1, 0, 0);
+        Allocator allocator = new Allocator(1, 0, 0, 5);
         List allocations = allocator.allocate(new HashSet<>());
         assertEquals(1, allocations.size());
     }
 
     @Test
     void shouldHaveZeroSessions() {
-        Allocator allocator = new Allocator(2, 0, 0);
+        Allocator allocator = new Allocator(2, 0, 0, 5);
         List allocations = allocator.allocate(new HashSet<>());
         assertEquals(2, allocations.size());
     }
 
     @Test
     void shouldHaveOneSessionOneTable() {
-        Allocator allocator = new Allocator(1, 1, 0);
+        Allocator allocator = new Allocator(1, 1, 0, 5);
         List<List<List<Person>>> allocations = allocator.allocate(new HashSet<>());
         assertEquals(1, allocations.get(0).size());
     }
 
     @Test()
     void shouldNotAllocateMoreThanMaxPerTable() {
-        Allocator allocator = new Allocator(1, 2, 0);
+        Allocator allocator = new Allocator(1, 2, 0, 5);
         Set<Person> people = new HashSet<>();
         people.add(new Person("Newton", "Isaac", "Calculus"));
 
@@ -47,7 +47,7 @@ class AllocatorTest {
 
     @Test()
     void shouldAllocateOnePersonPerTable() {
-        Allocator allocator = new Allocator(1, 2, 1);
+        Allocator allocator = new Allocator(1, 2, 1, 5);
         Set<Person> people = new HashSet<>();
         people.add(new Person("Newton", "Isaac", "Calculus"));
         people.add(new Person("Watt", "James", "SteamEngine"));
@@ -60,7 +60,7 @@ class AllocatorTest {
 
     @Test()
     void shouldMovePersonForEachSession() {
-        Allocator allocator = new Allocator(2, 2, 1);
+        Allocator allocator = new Allocator(2, 2, 1, 5);
         Set<Person> people = new HashSet<>();
         people.add(new Person("Newton", "Isaac", "Calculus"));
 

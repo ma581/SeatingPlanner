@@ -9,15 +9,17 @@ import java.util.stream.Collectors;
 class Allocator {
 
     private final int maxAttempts = 1000;
+    private final int maxPeopleOfSameProjectAtATable;
     private final int numberOfSessions;
     private final int numberOfTables;
     private final int maxPeoplePerTable;
     private List<List<List<Person>>> tableRotation = new ArrayList<>();
 
-    Allocator(int numberOfSessions, int numberOfTables, int maxPeoplePerTable) {
+    Allocator(int numberOfSessions, int numberOfTables, int maxPeoplePerTable, int maxPeopleOfSameProjectAtATable) {
         this.maxPeoplePerTable = maxPeoplePerTable;
         this.numberOfTables = numberOfTables;
         this.numberOfSessions = numberOfSessions;
+        this.maxPeopleOfSameProjectAtATable = maxPeopleOfSameProjectAtATable;
     }
 
 
@@ -78,7 +80,7 @@ class Allocator {
 
     private boolean hasTooManyOfSameProject(List<Person> peopleAtTableForSession, Person person) {
         final List<Person> peopleWithSameProject = peopleAtTableForSession.stream().filter(p -> p.project.equals(person.project)).collect(Collectors.toList());
-        return peopleWithSameProject.size() > 2;
+        return peopleWithSameProject.size() > maxPeopleOfSameProjectAtATable;
     }
 
     private void setPersonAtTableForSession(int tableNumber, int sessionNumber, Person person) {
