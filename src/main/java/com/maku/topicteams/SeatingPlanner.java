@@ -14,15 +14,15 @@ public class SeatingPlanner {
     public static void main(String[] args) {
         FileReader reader = new FileReader();
         reader.read(FILE_NAME);
-        Set<Person> names = reader.getNames();
+        Set<Person> people = reader.getPeople();
 
         Allocator allocator = new Allocator(NO_OF_SESSIONS, NO_OF_TABLES, MAX_PEOPLE_PER_TABLE, MAX_PEOPLE_OF_SAME_PROJECT_AT_A_TABLE);
-        List allocations = allocator.allocate(names);
+        List allocations = allocator.allocate(people);
 
         Printer printer = new Printer(allocations);
         printer.printAllocations();
         printer.printAllocationsProjectCount();
-        printer.printPeoplesTables(names);
+        printer.printPeoplesTables(people);
     }
 
 }

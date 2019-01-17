@@ -44,7 +44,7 @@ class FileReaderTest {
         expectedSet.add("Jeff");
         expectedSet.add("Alan");
 
-        assertEquals(expectedSet, reader.getNames().stream()
+        assertEquals(expectedSet, reader.getPeople().stream()
                 .map(Person::getFirstName)
                 .collect(Collectors.toSet()));
     }
@@ -61,7 +61,7 @@ class FileReaderTest {
         expectedSet.add("SpaceX");
         expectedSet.add("Amazon");
 
-        assertEquals(expectedSet, reader.getNames().stream()
+        assertEquals(expectedSet, reader.getPeople().stream()
                 .map(Person::getProject)
                 .collect(Collectors.toSet()));
     }

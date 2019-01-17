@@ -11,10 +11,10 @@ import java.util.stream.Stream;
 
 class FileReader {
 
-    private Set<Person> names = new HashSet<>();
+    private Set<Person> people = new HashSet<>();
 
-    Set<Person> getNames() {
-        return names;
+    Set<Person> getPeople() {
+        return people;
     }
 
     void read(String fileName) {
@@ -33,8 +33,8 @@ class FileReader {
     private void parseNameAndProject(Stream<String> stream) {
         stream.forEach(line -> {
             String[] arr = line.split(",");
-            Person r = new Person(arr[0], arr[1], arr[2]);
-            names.add(r);
+            Person person = new Person(arr[0], arr[1], arr[2]);
+            people.add(person);
         });
     }
 }
