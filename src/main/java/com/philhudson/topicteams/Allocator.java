@@ -8,10 +8,11 @@ import java.util.stream.Collectors;
 
 class Allocator {
 
+    private final int maxAllocationAttempts = 1000;
     private final int numberOfSessions;
     private final int numberOfTables;
     private final int maxPeoplePerTable;
-    private ArrayList<ArrayList<ArrayList<Record>>> tableRotation = new ArrayList<>();
+    ArrayList<ArrayList<ArrayList<Record>>> tableRotation = new ArrayList<>();
 
     Allocator(int maxPeoplePerTable, int numberOfTables, int numberOfSessions) {
         this.maxPeoplePerTable = maxPeoplePerTable;
@@ -64,7 +65,7 @@ class Allocator {
                 do {
                     proposedTableNumber = getTableTheyHaveNotSatAtBefore(person);
                     counter++;
-                    if (counter > 1000) {
+                    if (counter > maxAllocationAttempts) {
                         throw new RuntimeException("Too many attempts");
                     }
                 }
