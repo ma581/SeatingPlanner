@@ -1,9 +1,7 @@
 package com.philhudson.topicteams;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 class Printer {
 
@@ -18,12 +16,26 @@ class Printer {
     }
 
     void printTableRotation() {
+        printTitle("ALLOCATED SEATING PER SESSION");
         for (int i = 0; i < numberOfSessions; i++) {
             for (int j = 0; j < numberOfTables; j++) {
-                System.out.println("session = " + i + " , table = " + j + getPeopleAtTableForSession(j, i));
+                System.out.println("session = " + i + " , table = " + j + " " + getNames(getPeopleAtTableForSession(j, i)));
             }
+            System.out.println();
         }
-        System.out.print("________________________________________________\n");
+    }
+
+    private void printTitle(String title) {
+        System.out.println("****************************************************************************");
+        System.out.println("*********************** " + title + " ********************** ");
+        System.out.println("****************************************************************************");
+        System.out.println();
+    }
+
+    private List<String> getNames(List<Record> records) {
+        return records.stream()
+                .map(r -> r.getFirstName() + " " + r.getFirstName())
+                .collect(Collectors.toList());
     }
 
     private ArrayList<Record> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
@@ -31,6 +43,7 @@ class Printer {
     }
 
     void printTableRotationProjects() {
+        printTitle("ALLOCATED PEOPLE PROJECT COUNT");
         for (int i = 0; i < numberOfSessions; i++) {
             for (int j = 0; j < numberOfTables; j++) {
                 final ArrayList<Record> peopleAtTableForSession = getPeopleAtTableForSession(j, i);
@@ -42,7 +55,11 @@ class Printer {
                 System.out.println("session = " + i + " , table = " + j + " people: " + peopleAtTableForSession.size() + " " + numberOfPeopleOfProject);
             }
         }
-        System.out.print("________________________________________________\n");
+        System.out.println();
     }
 
+    public void printRecords(Collection names) {
+        printTitle("ALLOCATED TABLES FOR EACH PERSON");
+        names.forEach(System.out::println);
+    }
 }

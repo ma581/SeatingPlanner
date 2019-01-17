@@ -5,6 +5,14 @@ import java.util.List;
 
 public class Record {
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
     private String surname;
     private String firstName;
     String project;

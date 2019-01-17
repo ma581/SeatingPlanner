@@ -12,7 +12,7 @@ class Allocator {
     private final int numberOfSessions;
     private final int numberOfTables;
     private final int maxPeoplePerTable;
-    ArrayList<ArrayList<ArrayList<Record>>> tableRotation = new ArrayList<>();
+    List<List<ArrayList<Record>>> tableRotation = new ArrayList<>();
 
     Allocator(int maxPeoplePerTable, int numberOfTables, int numberOfSessions) {
         this.maxPeoplePerTable = maxPeoplePerTable;
