@@ -3,7 +3,7 @@ package com.maku.topicteams;
 import java.util.List;
 import java.util.Set;
 
-public class SeatingPlanMaker {
+public class SeatingPlanner {
 
     private static final int MAX_PEOPLE_PER_TABLE = 7;
     private static final int NO_OF_TABLES = 10;
