@@ -1,5 +1,5 @@
 # Seating Planner
-Creates an 'intelligent' seating plan for Zuhlke Camp
+Creates an smart seating plan for Zuhlke Camp
 
 1. Reads a `csv` of peoples Names and Projects from the directory `/src/main/resources`. (eg see `sample.csv` at the `/src/test/resources`)
 2. The seating algorithm tries to iterate through each person, for each session, randomly allocating a table where they have not sat at previously.
