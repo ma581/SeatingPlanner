@@ -1,4 +1,4 @@
-# SeatingPlanner
+# Seating Planner
 Creates an 'intelligent' seating plan for Zuhlke Camp
 
 1. Reads a csv of peoples Names and Projects from the directory `/src/main/resources`. (eg `sample.csv` at the `/src/test/resources`)
