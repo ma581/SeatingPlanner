@@ -6,14 +6,14 @@ import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
-public class Allocator {
+class Allocator {
 
     private final int numberOfSessions;
     private final int numberOfTables;
     private final int maxPeoplePerTable;
     private ArrayList<ArrayList<ArrayList<Record>>> tableRotation = new ArrayList<>();
 
-    public Allocator(int maxPeoplePerTable, int numberOfTables, int numberOfSessions) {
+    Allocator(int maxPeoplePerTable, int numberOfTables, int numberOfSessions) {
         this.maxPeoplePerTable = maxPeoplePerTable;
         this.numberOfTables = numberOfTables;
         this.numberOfSessions = numberOfSessions;
