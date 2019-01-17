@@ -15,28 +15,28 @@ class AllocatorTest {
 
     @Test
     void shouldHaveOneSession() {
-        Allocator allocator = new Allocator(1, 0, 0, 5);
+        Allocator allocator = new Allocator(1, 0, 0, 1);
         List allocations = allocator.allocate(new HashSet<>());
         assertEquals(1, allocations.size());
     }
 
     @Test
-    void shouldHaveZeroSessions() {
-        Allocator allocator = new Allocator(2, 0, 0, 5);
+    void shouldHaveTwoSessions() {
+        Allocator allocator = new Allocator(2, 0, 0, 1);
         List allocations = allocator.allocate(new HashSet<>());
         assertEquals(2, allocations.size());
     }
 
     @Test
     void shouldHaveOneSessionOneTable() {
-        Allocator allocator = new Allocator(1, 1, 0, 5);
+        Allocator allocator = new Allocator(1, 1, 0, 1);
         List<List<List<Person>>> allocations = allocator.allocate(new HashSet<>());
         assertEquals(1, allocations.get(0).size());
     }
 
     @Test()
     void shouldNotAllocateMoreThanMaxPerTable() {
-        Allocator allocator = new Allocator(1, 2, 0, 5);
+        Allocator allocator = new Allocator(1, 2, 0, 1);
         Set<Person> people = new HashSet<>();
         people.add(new Person("Newton", "Isaac", "Calculus"));
 
@@ -47,7 +47,7 @@ class AllocatorTest {
 
     @Test()
     void shouldAllocateOnePersonPerTable() {
-        Allocator allocator = new Allocator(1, 2, 1, 5);
+        Allocator allocator = new Allocator(1, 2, 1, 1);
         Set<Person> people = new HashSet<>();
         people.add(new Person("Newton", "Isaac", "Calculus"));
         people.add(new Person("Watt", "James", "SteamEngine"));
@@ -60,12 +60,36 @@ class AllocatorTest {
 
     @Test()
     void shouldMovePersonForEachSession() {
-        Allocator allocator = new Allocator(2, 2, 1, 5);
+        Allocator allocator = new Allocator(2, 2, 1, 1);
         Set<Person> people = new HashSet<>();
         people.add(new Person("Newton", "Isaac", "Calculus"));
 
         allocator.allocate(people);
 
         assertEquals(2, new ArrayList<>(people).get(0).previousTables.size());
+    }
+
+    @Test()
+    void shouldNotAllocateMoreThanMaxPeopleOfSameProject() {
+        Allocator allocator = new Allocator(1, 1, 2, 0);
+        Set<Person> people = new HashSet<>();
+        people.add(new Person("Newton", "Isaac", "Calculus"));
+        people.add(new Person("Newton 2", "Isaac", "Calculus"));
+
+        Executable ex = () -> allocator.allocate(people);
+
+        Assertions.assertThrows(RuntimeException.class, ex, "Too many attempts");
+    }
+
+    @Test()
+    void shouldAllocateWithinMaxPeopleOfSameProject() {
+        Allocator allocator = new Allocator(1, 1, 2, 1);
+        Set<Person> people = new HashSet<>();
+        people.add(new Person("Newton", "Isaac", "Calculus"));
+        people.add(new Person("Newton 2", "Isaac", "Calculus"));
+
+        List<List<List<Person>>> allocations = allocator.allocate(people);
+
+        assertEquals(2, allocations.get(0).get(0).size());
     }
 }
