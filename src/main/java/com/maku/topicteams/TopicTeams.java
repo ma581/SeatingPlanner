@@ -16,12 +16,12 @@ public class TopicTeams {
         Set<Person> names = reader.getNames();
 
         Allocator allocator = new Allocator(NO_OF_SESSIONS, NO_OF_TABLES, MAX_PEOPLE_PER_TABLE);
-        List tableRotation = allocator.allocate(names);
+        List allocations = allocator.allocate(names);
 
-        Printer printer = new Printer(NO_OF_TABLES, NO_OF_SESSIONS, tableRotation);
-        printer.printTableRotation();
-        printer.printTableRotationProjects();
-        printer.printRecords(names);
+        Printer printer = new Printer(allocations);
+        printer.printAllocations();
+        printer.printAllocationsProjectCount();
+        printer.printPeoplesTables(names);
     }
 
 }

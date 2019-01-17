@@ -10,15 +10,15 @@ class Printer {
 
     private final int numberOfSessions;
     private final int numberOfTables;
-    private List<List<List<Person>>> tableRotation;
+    private List<List<List<Person>>> allocations;
 
-    Printer(int numberOfTables, int numberOfSessions, List tableRotation) {
-        this.numberOfTables = numberOfTables;
-        this.numberOfSessions = numberOfSessions;
-        this.tableRotation = (List<List<List<Person>>>) tableRotation;
+    Printer(List<List<List<Person>>> allocations) {
+        this.allocations = allocations;
+        this.numberOfSessions = allocations.size();
+        this.numberOfTables = allocations.get(0).size();
     }
 
-    void printTableRotation() {
+    void printAllocations() {
         printTitle("ALLOCATED SEATING PER SESSION");
         for (int i = 0; i < numberOfSessions; i++) {
             for (int j = 0; j < numberOfTables; j++) {
@@ -42,10 +42,10 @@ class Printer {
     }
 
     private List<Person> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
-        return tableRotation.get(sessionNumber).get(tableNumber);
+        return allocations.get(sessionNumber).get(tableNumber);
     }
 
-    void printTableRotationProjects() {
+    void printAllocationsProjectCount() {
         printTitle("ALLOCATED PEOPLE PROJECT COUNT");
         for (int i = 0; i < numberOfSessions; i++) {
             for (int j = 0; j < numberOfTables; j++) {
@@ -61,7 +61,7 @@ class Printer {
         System.out.println();
     }
 
-    void printRecords(Collection names) {
+    void printPeoplesTables(Collection names) {
         printTitle("ALLOCATED TABLES FOR EACH PERSON");
         names.forEach(System.out::println);
     }

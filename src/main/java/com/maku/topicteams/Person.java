@@ -17,19 +17,18 @@ public class Person {
         previousTables = new ArrayList<>();
     }
 
-    public String getSurname() {
+    String getSurname() {
         return surname;
     }
 
-    public String getFirstName() {
+    String getFirstName() {
         return firstName;
     }
 
     @Override
     public String toString() {
         return "{" + surname + ' ' + firstName +
-                ", project='" + project + '\'' +
-                ", previousTables=" + previousTables +
+                ", allocatedTables=" + previousTables +
                 '}';
     }
 
