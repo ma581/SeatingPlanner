@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FileReaderTest {
 
-    String fileName = "sample.csv";
+    private String fileName = "sample.csv";
 
     @Test
     void shouldReadFileFromResources() throws IOException, URISyntaxException {
