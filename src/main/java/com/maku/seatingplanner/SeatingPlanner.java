@@ -1,4 +1,4 @@
-package com.maku.topicteams;
+package com.maku.seatingplanner;
 
 import java.util.List;
 import java.util.Set;

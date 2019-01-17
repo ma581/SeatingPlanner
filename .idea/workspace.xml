@@ -22,17 +22,18 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15f3a532-fe04-405c-b29c-d7315dd6f354" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/topicteams2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/philhudson/topicteams/Record.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/philhudson/topicteams/TopicTeams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/philhudson/topicteams/TopicTeamsTest.class" beforeDir="false" />
+    <list default="true" id="15f3a532-fe04-405c-b29c-d7315dd6f354" name="Default" comment="Renamed module and package">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maku/topicteams/Allocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Allocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maku/topicteams/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maku/topicteams/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maku/topicteams/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/maku/topicteams/SeatingPlanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/SeatingPlanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/maku/topicteams/AllocatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/maku/seatingplanner/AllocatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/maku/topicteams/FileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/maku/seatingplanner/FileReaderTest.java" afterDir="false" />
     </list>
+    <list id="60ca0ca8-486e-43f7-a501-f5e313d1703b" name="ignored" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,6 +41,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/topicteams2$com_maku_topicteams_in_topicteams2.ic" NAME="com.maku.topicteams in topicteams2 Coverage Results" MODIFIED="1547768595312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.maku.topicteams.*</FILTER>
+    </SUITE>
   </component>
   <component name="ElmWorkspace">
     <elmProjects />
@@ -49,141 +55,168 @@
     <session id="69557519">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="csv" value="83" />
+          <entry key="dummy" value="52" />
           <entry key="gitignore" value="14" />
-          <entry key="java" value="393" />
+          <entry key="java" value="3588" />
+          <entry key="txt" value="280" />
+          <entry key="xml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="14" />
-          <entry key="JAVA" value="393" />
+          <entry key="JAVA" value="3588" />
+          <entry key="PLAIN_TEXT" value="415" />
+          <entry key="XML" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="csv" value="2" />
+          <entry key="csv" value="8" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="5" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="15" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
+          <entry key="CSV" value="2" />
           <entry key="Git file" value="3" />
-          <entry key="JAVA" value="5" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="15" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1261471427">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="txt" value="30" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="30" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4556506">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/TopicTeams.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="452">
-                  <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#parseNameProjectAndTopicTeamLead#0;class#TopicTeams#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Allocator.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="13" column="43" selection-start-line="13" selection-end-line="14" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="method#hasTooManyAtTable#0;class#Allocator#0" />
-                    <element signature="method#allocate#0;class#Allocator#0" />
-                    <element signature="method#hasTooManyOfSameProject#0;class#Allocator#0" />
-                    <element signature="method#setPersonAtTableForSession#0;class#Allocator#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Printer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="520">
-                  <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/philhudson/topicteams/TopicTeamsTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Record.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/Camp2018.csv">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/TopicTeams.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="600">
-                  <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/maku/seatingplanner/FileReaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/SeatingPlanner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Camp2018.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="196">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Allocator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#setPersonAtTableForSession#0;class#Allocator#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Printer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#printTitle#0;class#Printer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -195,12 +228,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>8</find>
+      <find>projects</find>
+      <find>TTL</find>
+      <find>remainingPeople</find>
+      <find>5</find>
     </findStrings>
     <replaceStrings>
       <replace>NO_OF_TABLES</replace>
+      <replace>1</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -215,14 +254,30 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Table.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Record.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/philhudson/topicteams/TopicTeamsTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/test/java/com/philhudson/topicteams/AllocatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Allocator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Printer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/philhudson/topicteams/NamesAndProjects.csv" />
+        <option value="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/FileReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/TopicTeams.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Record.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/philhudson/topicteams/FileReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/Record.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/maku/topicteams/FileReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/TopicTeams.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/SeatingPlanMaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/Allocator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/maku/topicteams/AllocatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/SeatingPlanner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/FileReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/topicteams/Printer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Person.java" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
       </list>
     </option>
   </component>
@@ -240,10 +295,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="1417" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -251,116 +305,109 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="philhudson" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="philhudson" type="462c0819:PsiDirectoryNode" />
-              <item name="topicteams" type="462c0819:PsiDirectoryNode" />
+              <item name="maku" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="maku" type="462c0819:PsiDirectoryNode" />
+              <item name="seatingplanner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="philhudson" type="462c0819:PsiDirectoryNode" />
+              <item name="maku" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="topicteams2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="topicteams2" type="462c0819:PsiDirectoryNode" />
+              <item name="SeatingPlanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SeatingPlanner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="philhudson" type="462c0819:PsiDirectoryNode" />
-              <item name="topicteams" type="462c0819:PsiDirectoryNode" />
+              <item name="maku" type="462c0819:PsiDirectoryNode" />
+              <item name="seatingplanner" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,21 +415,29 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/philhudson/topicteams" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.philhudson.topicteams" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/philhudson/topicteams" />
       <recent name="$PROJECT_DIR$/src/test/java" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -404,13 +459,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TopicTeams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.philhudson.topicteams.TopicTeams" />
-      <module name="topicteams2" />
+    <configuration name="SeatingPlanner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.maku.seatingplanner.SeatingPlanner" />
+      <module name="seatingplanner" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.philhudson.topicteams.*" />
+          <option name="PATTERN" value="com.maku.seatingplanner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -424,6 +479,202 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All Features in: test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="3" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="seatingplanner" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm3SMFormatter" />
+      <option name="SUGGESTED_NAME" value="All Features in: test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AllocatorTest.shouldAllocateWithinMaxPeopleOfSameProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seatingplanner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.maku.seatingplanner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.maku.seatingplanner" />
+      <option name="MAIN_CLASS_NAME" value="com.maku.seatingplanner.AllocatorTest" />
+      <option name="METHOD_NAME" value="shouldAllocateWithinMaxPeopleOfSameProject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllocatorTest.shouldNotAllocateMoreThanMaxPeopleOfSameProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seatingplanner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.maku.seatingplanner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.maku.seatingplanner" />
+      <option name="MAIN_CLASS_NAME" value="com.maku.seatingplanner.AllocatorTest" />
+      <option name="METHOD_NAME" value="shouldNotAllocateMoreThanMaxPeopleOfSameProject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Whole project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.maku.seatingplanner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.maku.seatingplanner" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="SeatingPlanner" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="SeatingPlanner" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer" factoryName="Flask server">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
@@ -432,9 +683,113 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="SeatingPlanner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.SeatingPlanner" />
+      <item itemvalue="JUnit.AllocatorTest.shouldNotAllocateMoreThanMaxPeopleOfSameProject" />
+      <item itemvalue="JUnit.AllocatorTest.shouldAllocateWithinMaxPeopleOfSameProject" />
+      <item itemvalue="Cucumber java.All Features in: test" />
+      <item itemvalue="JUnit.Whole project" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TopicTeams" />
+        <item itemvalue="JUnit.Whole project" />
+        <item itemvalue="Application.SeatingPlanner" />
+        <item itemvalue="Cucumber java.All Features in: test" />
+        <item itemvalue="JUnit.AllocatorTest.shouldAllocateWithinMaxPeopleOfSameProject" />
+        <item itemvalue="JUnit.AllocatorTest.shouldNotAllocateMoreThanMaxPeopleOfSameProject" />
       </list>
     </recent_temporary>
   </component>
@@ -452,32 +807,180 @@
       <workItem from="1532694276399" duration="322000" />
       <workItem from="1547214318798" duration="39000" />
       <workItem from="1547743730260" duration="1441000" />
+      <workItem from="1547758925943" duration="9068000" />
+      <workItem from="1547768965590" duration="239000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix gitignore">
+      <created>1547750440341</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547750440341</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix gitignore">
+      <created>1547750499645</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547750499645</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added initial tests">
+      <created>1547751715485</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547751715485</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added initial tests v2">
+      <created>1547751771370</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547751771370</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Prettier printout">
+      <created>1547757570014</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547757570014</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Relative file path">
+      <created>1547760466926</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547760466926</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Renamed package to maku">
+      <created>1547760679490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1547760679490</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor FileReader">
+      <created>1547761278953</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547761278953</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactor allocations">
+      <created>1547765130252</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1547765130252</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Reformat code">
+      <created>1547765340496</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1547765340496</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactor">
+      <created>1547765864312</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1547765864312</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactor">
+      <created>1547766028518</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1547766028518</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactor">
+      <created>1547766160195</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1547766160195</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Extract variable of max people of same project">
+      <created>1547767023415</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1547767023415</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Test for max people of same project at a table">
+      <created>1547768189744</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1547768189744</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Minor refactor of names">
+      <created>1547768574498</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1547768574498</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="com_maku_topicteams_in_topicteams2 - 2019.01.17 at 23h 02m 21s.xml">
+      <configuration name="com.maku.topicteams in topicteams2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_maku_topicteams_in_topicteams2 - 2019.01.17 at 23h 15m 27s.xml">
+      <configuration name="com.maku.topicteams in topicteams2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllocatorTest - 2019.01.17 at 23h 31m 08s.xml">
+      <configuration name="AllocatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllocatorTest_shouldNotAllocateMoreThanMaxPeopleOfSameProject - 2019.01.17 at 23h 32m 58s.xml">
+      <configuration name="AllocatorTest.shouldNotAllocateMoreThanMaxPeopleOfSameProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllocatorTest_shouldNotAllocateMoreThanMaxPeopleOfSameProject - 2019.01.17 at 23h 33m 32s.xml">
+      <configuration name="AllocatorTest.shouldNotAllocateMoreThanMaxPeopleOfSameProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllocatorTest_shouldNotAllocateMoreThanMaxPeopleOfSameProject - 2019.01.17 at 23h 33m 45s.xml">
+      <configuration name="AllocatorTest.shouldNotAllocateMoreThanMaxPeopleOfSameProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllocatorTest_shouldAllocateWithinMaxPeopleOfSameProject - 2019.01.17 at 23h 35m 04s.xml">
+      <configuration name="AllocatorTest.shouldAllocateWithinMaxPeopleOfSameProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllocatorTest_shouldAllocateWithinMaxPeopleOfSameProject - 2019.01.17 at 23h 35m 15s.xml">
+      <configuration name="AllocatorTest.shouldAllocateWithinMaxPeopleOfSameProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_maku_topicteams_in_topicteams2 - 2019.01.17 at 23h 43m 05s.xml">
+      <configuration name="com.maku.topicteams in topicteams2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_maku_topicteams_in_topicteams2 - 2019.01.17 at 23h 43m 17s.xml">
+      <configuration name="com.maku.topicteams in topicteams2" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11695000" />
+    <option name="totallyTimeSpent" value="26588000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15409055" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21387696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25422427" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32939634" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35170603" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39895013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32872504" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32949308" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49960285" weight="0.328084" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.328084" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TeamCity" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50039715" side_tool="true" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.37173578" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -489,6 +992,7 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Elm" order="7" />
       <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3297568" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,38 +1027,55 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Allocator.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix gitignore" />
+    <MESSAGE value="Added initial tests" />
+    <MESSAGE value="Added initial tests v2" />
+    <MESSAGE value="Prettier printout" />
+    <MESSAGE value="Relative file path" />
+    <MESSAGE value="Renamed package to maku" />
+    <MESSAGE value="Refactor FileReader" />
+    <MESSAGE value="Refactor allocations" />
+    <MESSAGE value="Reformat code" />
+    <MESSAGE value="Refactor" />
+    <MESSAGE value="Extract variable of max people of same project" />
+    <MESSAGE value="Test for max people of same project at a table" />
+    <MESSAGE value="Minor refactor of names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor refactor of names" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>getClass().getResource(&quot;Allocator.java&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getClass().getResource(&quot;Printer.java&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getClass().getResource(&quot;AllocatorTest&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getClass().getResource(&quot;AllocatorTest.java&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getClass().getResource(&quot;AllocaterTest.java&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Driving/program files/DVSA Hazard Perception DVD/app.nw/landing.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Table.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Camp2018.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/data.csv" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/java/nio/file/Paths.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -562,71 +1083,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/philhudson/topicteams/TopicTeamsTest.java">
+    <entry file="file://$PROJECT_DIR$/target/classes/com/philhudson/topicteams/TopicTeams.class" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="42">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Record.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/NamesAndProjects.csv" />
+    <entry file="file://$PROJECT_DIR$/topicteams2.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/blah.csv" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/sample.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="6" selection-end-column="6" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        <state relative-caret-position="69">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/maku/seatingplanner/AllocatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1274">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/maku/seatingplanner/FileReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Allocator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/SeatingPlanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="43" selection-start-line="13" selection-end-line="14" />
+        <state relative-caret-position="280">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#hasTooManyAtTable#0;class#Allocator#0" />
-            <element signature="method#allocate#0;class#Allocator#0" />
-            <element signature="method#hasTooManyOfSameProject#0;class#Allocator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Camp2018.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Allocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#setPersonAtTableForSession#0;class#Allocator#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/TopicTeams.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="140">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#parseNameProjectAndTopicTeamLead#0;class#TopicTeams#0" />
+            <element signature="method#printTitle#0;class#Printer#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/philhudson/topicteams/TopicTeams.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maku/seatingplanner/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#2742#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/philhudson/topicteams/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="364">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="168">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -659,6 +1242,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Python 2.7 interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -687,7 +1271,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,4 +1,4 @@
-package com.maku.topicteams;
+package com.maku.seatingplanner;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
