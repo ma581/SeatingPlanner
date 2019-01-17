@@ -7,12 +7,12 @@ class Printer {
 
     private final int numberOfSessions;
     private final int numberOfTables;
-    private ArrayList<ArrayList<ArrayList<Record>>> tableRotation;
+    private ArrayList<ArrayList<ArrayList<Person>>> tableRotation;
 
     Printer(int numberOfTables, int numberOfSessions, List tableRotation) {
         this.numberOfTables = numberOfTables;
         this.numberOfSessions = numberOfSessions;
-        this.tableRotation = (ArrayList<ArrayList<ArrayList<Record>>>) tableRotation;
+        this.tableRotation = (ArrayList<ArrayList<ArrayList<Person>>>) tableRotation;
     }
 
     void printTableRotation() {
@@ -32,13 +32,13 @@ class Printer {
         System.out.println();
     }
 
-    private List<String> getNames(List<Record> records) {
-        return records.stream()
-                .map(r -> r.getFirstName() + " " + r.getFirstName())
+    private List<String> getNames(List<Person> people) {
+        return people.stream()
+                .map(r -> r.getFirstName() + " " + r.getSurname())
                 .collect(Collectors.toList());
     }
 
-    private ArrayList<Record> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
+    private ArrayList<Person> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
         return tableRotation.get(sessionNumber).get(tableNumber);
     }
 
@@ -46,10 +46,10 @@ class Printer {
         printTitle("ALLOCATED PEOPLE PROJECT COUNT");
         for (int i = 0; i < numberOfSessions; i++) {
             for (int j = 0; j < numberOfTables; j++) {
-                final ArrayList<Record> peopleAtTableForSession = getPeopleAtTableForSession(j, i);
+                final ArrayList<Person> peopleAtTableForSession = getPeopleAtTableForSession(j, i);
                 Map<String, Integer> numberOfPeopleOfProject = new HashMap<>();
 
-                for (Record person : peopleAtTableForSession) {
+                for (Person person : peopleAtTableForSession) {
                     numberOfPeopleOfProject.merge(person.project, 1, (a, b) -> a + b);
                 }
                 System.out.println("session = " + i + " , table = " + j + " people: " + peopleAtTableForSession.size() + " " + numberOfPeopleOfProject);

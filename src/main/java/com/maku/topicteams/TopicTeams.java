@@ -13,9 +13,9 @@ public class TopicTeams {
     public static void main(String[] args) {
         FileReader reader = new FileReader();
         reader.read(FILE_NAME);
-        Set<Record> names = reader.getNames();
+        Set<Person> names = reader.getNames();
 
-        Allocator allocator = new Allocator(MAX_PEOPLE_PER_TABLE, NO_OF_TABLES, NO_OF_SESSIONS);
+        Allocator allocator = new Allocator(NO_OF_SESSIONS, NO_OF_TABLES, MAX_PEOPLE_PER_TABLE);
         List tableRotation = allocator.allocate(names);
 
         Printer printer = new Printer(NO_OF_TABLES, NO_OF_SESSIONS, tableRotation);

@@ -8,20 +8,20 @@ import java.util.stream.Collectors;
 
 class Allocator {
 
-    private final int maxAllocationAttempts = 1000;
+    private final int maxAttempts = 1000;
     private final int numberOfSessions;
     private final int numberOfTables;
     private final int maxPeoplePerTable;
-    List<List<ArrayList<Record>>> tableRotation = new ArrayList<>();
+    private List<List<List<Person>>> tableRotation = new ArrayList<>();
 
-    Allocator(int maxPeoplePerTable, int numberOfTables, int numberOfSessions) {
+    Allocator(int numberOfSessions, int numberOfTables, int maxPeoplePerTable) {
         this.maxPeoplePerTable = maxPeoplePerTable;
         this.numberOfTables = numberOfTables;
         this.numberOfSessions = numberOfSessions;
     }
 
 
-    private int getTableTheyHaveNotSatAtBefore(Record person) {
+    private int getTableTheyHaveNotSatAtBefore(Person person) {
         int proposedTableNumber;
         do {
             proposedTableNumber = ThreadLocalRandom.current().nextInt(0, numberOfTables);
@@ -31,65 +31,57 @@ class Allocator {
     }
 
     private void initializeTableRotation() {
-        for (int i = 0; i < numberOfSessions; i++) {
+        for (int sessionNumber = 0; sessionNumber < numberOfSessions; sessionNumber++) {
             tableRotation.add(new ArrayList<>());
-            for (int j = 0; j < numberOfTables; j++) {
-                tableRotation.get(i).add(new ArrayList<>());
+            for (int tableNumber = 0; tableNumber < numberOfTables; tableNumber++) {
+                tableRotation.get(sessionNumber).add(new ArrayList<>());
             }
         }
     }
 
-    private boolean hasTooManyAtTable(ArrayList<Record> peopleAtTable, int tableNumber) {
-        switch (tableNumber) {
-            case 0:
-            case 1:
-            case 2:
-                return peopleAtTable.size() > maxPeoplePerTable - 1;
-            default:
-                return peopleAtTable.size() > maxPeoplePerTable - 1;
-        }
+    private boolean hasTooManyAtTable(List<Person> peopleAtTable, int tableNumber) {
+        return peopleAtTable.size() > maxPeoplePerTable - 1;
     }
 
-    List allocate(Set<Record> names) {
+    List<List<List<Person>>> allocate(Set<Person> people) {
         initializeTableRotation();
 
         System.out.println("Allocating...");
-        for (int k = 0; k < names.size(); k++) {
-            ArrayList<Record> remainingNames = new ArrayList<>(names);
+        for (int p = 0; p < people.size(); p++) {
 
             for (int session = 0; session < numberOfSessions; session++) {
-                Record person = remainingNames.get(k);
+                Person currentPerson = new ArrayList<>(people).get(p);
 
                 int proposedTableNumber;
-                int counter = 0;
+                int numberOfAttempts = 0;
                 do {
-                    proposedTableNumber = getTableTheyHaveNotSatAtBefore(person);
-                    counter++;
-                    if (counter > maxAllocationAttempts) {
+                    proposedTableNumber = getTableTheyHaveNotSatAtBefore(currentPerson);
+                    numberOfAttempts++;
+                    if (numberOfAttempts > maxAttempts) {
                         throw new RuntimeException("Too many attempts");
                     }
                 }
                 while (
                         hasTooManyAtTable(getPeopleAtTableForSession(proposedTableNumber, session), proposedTableNumber) ||
-                                hasTooManyOfSameProject(getPeopleAtTableForSession(proposedTableNumber, session), person));
+                                hasTooManyOfSameProject(getPeopleAtTableForSession(proposedTableNumber, session), currentPerson));
 
-                person.previousTables.add(proposedTableNumber);
-                setPersonAtTableForSession(proposedTableNumber, session, person);
+                currentPerson.previousTables.add(proposedTableNumber);
+                setPersonAtTableForSession(proposedTableNumber, session, currentPerson);
             }
         }
         return tableRotation;
     }
 
-    private ArrayList<Record> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
+    private List<Person> getPeopleAtTableForSession(int tableNumber, int sessionNumber) {
         return tableRotation.get(sessionNumber).get(tableNumber);
     }
 
-    private boolean hasTooManyOfSameProject(ArrayList<Record> peopleAtTableForSession, Record person) {
-        final List<Record> peopleWithSameProject = peopleAtTableForSession.stream().filter(p -> p.project.equals(person.project)).collect(Collectors.toList());
+    private boolean hasTooManyOfSameProject(List<Person> peopleAtTableForSession, Person person) {
+        final List<Person> peopleWithSameProject = peopleAtTableForSession.stream().filter(p -> p.project.equals(person.project)).collect(Collectors.toList());
         return peopleWithSameProject.size() > 2;
     }
 
-    private void setPersonAtTableForSession(int tableNumber, int sessionNumber, Record person) {
+    private void setPersonAtTableForSession(int tableNumber, int sessionNumber, Person person) {
         tableRotation.get(sessionNumber).get(tableNumber).add(person);
     }
 }

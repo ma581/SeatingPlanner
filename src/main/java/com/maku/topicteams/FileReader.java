@@ -9,9 +9,9 @@ import java.util.stream.Stream;
 
 class FileReader {
 
-    private Set<Record> names = new HashSet<>();
+    private Set<Person> names = new HashSet<>();
 
-    Set<Record> getNames() {
+    Set<Person> getNames() {
         return names;
     }
 
@@ -31,7 +31,7 @@ class FileReader {
     private void parseNameAndProject(Stream<String> stream) {
         stream.forEach(line -> {
             String[] arr = line.split(",");
-            Record r = new Record(arr[0], arr[1], arr[2]);
+            Person r = new Person(arr[0], arr[1], arr[2]);
             names.add(r);
         });
     }

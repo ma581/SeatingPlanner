@@ -3,7 +3,7 @@ package com.maku.topicteams;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Record {
+public class Person {
 
     public String getSurname() {
         return surname;
@@ -18,7 +18,7 @@ public class Record {
     String project;
     List<Integer> previousTables;
 
-    Record(String surname, String firstName, String project) {
+    Person(String surname, String firstName, String project) {
         this.surname = surname;
         this.firstName = firstName;
         this.project = project;
@@ -27,9 +27,7 @@ public class Record {
 
     @Override
     public String toString() {
-        return "Record{" +
-            "surname='" + surname + '\'' +
-            ", firstname='" + firstName + '\'' +
+        return "{"+ surname + ' ' + firstName +
             ", project='" + project + '\'' +
             ", previousTables=" + previousTables +
             '}';

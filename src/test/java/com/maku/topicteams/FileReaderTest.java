@@ -7,9 +7,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -40,10 +38,15 @@ class FileReaderTest {
 
         reader.read(fileName);
 
-        List<Record> namesAsList = new ArrayList<>(reader.getNames());
-        assertEquals(4, namesAsList.size());
-        assertEquals("Isaac", namesAsList.get(0).getFirstName());
-        assertEquals("\uFEFFNewton", namesAsList.get(0).getSurname());
+        Set<String> expectedSet = new HashSet<>();
+        expectedSet.add("Isaac");
+        expectedSet.add("Elon");
+        expectedSet.add("Jeff");
+        expectedSet.add("Alan");
+
+        assertEquals(expectedSet, reader.getNames().stream()
+                .map(Person::getFirstName)
+                .collect(Collectors.toSet()));
     }
 
     @Test
@@ -59,7 +62,7 @@ class FileReaderTest {
         expectedSet.add("Amazon");
 
         assertEquals(expectedSet, reader.getNames().stream()
-                .map(Record::getProject)
+                .map(Person::getProject)
                 .collect(Collectors.toSet()));
     }
 }
