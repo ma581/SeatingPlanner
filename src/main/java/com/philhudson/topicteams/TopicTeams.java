@@ -8,7 +8,7 @@ public class TopicTeams {
     private static final int MAX_PEOPLE_PER_TABLE = 7;
     private static final int NO_OF_TABLES = 10;
     private static final int NO_OF_SESSIONS = 3;
-    private static final String FILE_NAME = "/Users/maku/Documents/topicteams2/src/main/resources/Camp2018.csv";
+    private static final String FILE_NAME = "Camp2018.csv";
 
     public static void main(String[] args) {
         FileReader reader = new FileReader();

@@ -1,6 +1,7 @@
 package com.philhudson.topicteams;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -26,9 +27,12 @@ class FileReader {
     }
 
     void read(String fileName){
-        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+        try (Stream<String> stream = Files.lines(Paths.get(getClass().getClassLoader()
+                .getResource(fileName).toURI()))) {
             parseNameProjectAndTopicTeamLead(names, projects, topicTeamLead, stream);
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
             e.printStackTrace();
         }
     }

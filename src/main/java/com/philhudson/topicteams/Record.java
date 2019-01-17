@@ -34,4 +34,8 @@ public class Record {
             ", previousTables=" + previousTables +
             '}';
     }
+
+    public String getProject() {
+        return project;
+    }
 }
