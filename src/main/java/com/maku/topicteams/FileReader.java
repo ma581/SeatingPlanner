@@ -1,4 +1,4 @@
-package com.philhudson.topicteams;
+package com.maku.topicteams;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

@@ -1,4 +1,4 @@
-package com.philhudson.topicteams;
+package com.maku.topicteams;
 
 import java.util.ArrayList;
 import java.util.List;

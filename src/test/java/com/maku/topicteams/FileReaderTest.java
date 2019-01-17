@@ -1,4 +1,4 @@
-package com.philhudson.topicteams;
+package com.maku.topicteams;
 
 import org.junit.jupiter.api.Test;
 
